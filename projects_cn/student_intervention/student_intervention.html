@@ -12285,7 +12285,7 @@ Testing set has 95 samples.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：从sklearn中引入三个监督学习模型</span>
@@ -12294,7 +12294,7 @@ Testing set has 95 samples.
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">svm</span> 
 
 <span class="c1"># TODO：初始化三个模型</span>
-<span class="n">clf_A</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+<span class="n">clf_A</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">clf_B</span> <span class="o">=</span> <span class="n">MLPClassifier</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s1">&#39;lbfgs&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span><span class="n">hidden_layer_sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">clf_C</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 
@@ -12328,58 +12328,58 @@ Testing set has 95 samples.
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training a DecisionTreeClassifier using a training set size of 100. . .
-Trained model in 0.0016 seconds
-Made predictions in 0.0008 seconds.
+Trained model in 0.0027 seconds
+Made predictions in 0.0005 seconds.
 F1 score for training set: 1.0000.
-Made predictions in 0.0004 seconds.
-F1 score for test set: 0.7288.
+Made predictions in 0.0003 seconds.
+F1 score for test set: 0.6496.
 Training a DecisionTreeClassifier using a training set size of 200. . .
 Trained model in 0.0015 seconds
 Made predictions in 0.0003 seconds.
 F1 score for training set: 1.0000.
 Made predictions in 0.0002 seconds.
-F1 score for test set: 0.7424.
+F1 score for test set: 0.7287.
 Training a DecisionTreeClassifier using a training set size of 300. . .
-Trained model in 0.0023 seconds
-Made predictions in 0.0005 seconds.
-F1 score for training set: 1.0000.
-Made predictions in 0.0007 seconds.
-F1 score for test set: 0.7273.
-Training a MLPClassifier using a training set size of 100. . .
-Trained model in 0.1288 seconds
+Trained model in 0.0026 seconds
 Made predictions in 0.0006 seconds.
+F1 score for training set: 1.0000.
+Made predictions in 0.0003 seconds.
+F1 score for test set: 0.7317.
+Training a MLPClassifier using a training set size of 100. . .
+Trained model in 0.0943 seconds
+Made predictions in 0.0026 seconds.
 F1 score for training set: 0.9173.
 Made predictions in 0.0007 seconds.
 F1 score for test set: 0.7538.
 Training a MLPClassifier using a training set size of 200. . .
-Trained model in 0.1860 seconds
-Made predictions in 0.0019 seconds.
+Trained model in 0.0842 seconds
+Made predictions in 0.0005 seconds.
 F1 score for training set: 0.7034.
-Made predictions in 0.0010 seconds.
+Made predictions in 0.0003 seconds.
 F1 score for test set: 0.6545.
 Training a MLPClassifier using a training set size of 300. . .
-Trained model in 0.1369 seconds
-Made predictions in 0.0007 seconds.
+Trained model in 0.1440 seconds
+Made predictions in 0.0008 seconds.
 F1 score for training set: 0.8491.
 Made predictions in 0.0003 seconds.
 F1 score for test set: 0.7302.
 Training a SVC using a training set size of 100. . .
-Trained model in 0.0012 seconds
-Made predictions in 0.0008 seconds.
+Trained model in 0.0037 seconds
+Made predictions in 0.0011 seconds.
 F1 score for training set: 0.8591.
-Made predictions in 0.0008 seconds.
+Made predictions in 0.0009 seconds.
 F1 score for test set: 0.7838.
 Training a SVC using a training set size of 200. . .
-Trained model in 0.0031 seconds
-Made predictions in 0.0024 seconds.
+Trained model in 0.0037 seconds
+Made predictions in 0.0026 seconds.
 F1 score for training set: 0.8693.
-Made predictions in 0.0012 seconds.
+Made predictions in 0.0013 seconds.
 F1 score for test set: 0.7755.
 Training a SVC using a training set size of 300. . .
-Trained model in 0.0063 seconds
-Made predictions in 0.0050 seconds.
+Trained model in 0.0065 seconds
+Made predictions in 0.0049 seconds.
 F1 score for training set: 0.8692.
-Made predictions in 0.0018 seconds.
+Made predictions in 0.0017 seconds.
 F1 score for test set: 0.7586.
 </pre>
 </div>
@@ -12555,7 +12555,11 @@ F1 score for test set: 0.7586.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>回答: </strong>  我们用一条线来分割学生毕业的和没有毕业的，这条线的规则是让毕业的和没有毕业的差距越大越好（数学方法），那么这条线就是我们的分类规则。在区分时有时会用到核函数，为什么要用到它呢？因为有些时候数据是不好分割的，那么就需要将这些数据映射到更高的纬度，可以参考视频教程<a href="https://www.youtube.com/watch?v=_PwhiWxHK8o">https://www.youtube.com/watch?v=_PwhiWxHK8o</a> 于是映射的这些规则就被成为核函数，而且原始数据可能会存在线性不可分的情况，就是很难用分类器分开的情况，那么核函数就能比较完美的解决这个问题。</p>
+<p><strong>回答: </strong>  我们需要用某一规则将学生分割成毕业的和没有毕业的，如图所示
+<img src='https://qph.ec.quoracdn.net/main-qimg-dcc536ffc99b44cdaa84dcf4b5e72f52?convert_to_webp=true'/></p>
+<p>如图所示，A就是这条分割规则，而B则称为间距，间距就是A到两个分割区域距离最近的点的距离之和。我们的SVM就是要找到这条线，即分割规则。当然，这些点可能不是线性可分的，就是说无法用一条直线来分割，那么我们就要使用核函数把这些点映射到高维空间，然后用一个平面来分割这些点，如下图所示
+<img src='http://i.imgur.com/WuxyO.png'/></p>
+<p>这样，这些点就被这个平面成功的分割出来了，同样，这个超平面与高维曲面的交线在原有的平面上的投影就是我们的分类规则，我们可以用一个视频来解释这个问题,<a href="https://youtu.be/3liCbRZPrZA">https://youtu.be/3liCbRZPrZA</a> (markdown貌似没法插入youtube)</p>
 
 </div>
 </div>
@@ -12586,7 +12590,7 @@ F1 score for test set: 0.7586.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: 导入 &#39;GridSearchCV&#39; 和 &#39;make_scorer&#39;</span>
@@ -12605,7 +12609,7 @@ F1 score for test set: 0.7586.
 <span class="n">f1_scorer</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">f1_score</span><span class="p">,</span><span class="n">pos_label</span> <span class="o">=</span> <span class="s1">&#39;yes&#39;</span><span class="p">)</span>
 
 <span class="c1"># TODO：在分类器上使用f1_scorer作为评分函数运行网格搜索</span>
-<span class="n">grid_obj</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span><span class="n">parameters</span><span class="p">)</span>
+<span class="n">grid_obj</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span><span class="n">parameters</span><span class="p">,</span><span class="n">scoring</span><span class="o">=</span><span class="n">f1_scorer</span><span class="p">)</span>
 
 <span class="c1"># TODO: Fit the grid search object to the training data and find the optimal parameters</span>
 <span class="c1"># TODO：用训练集训练grid search object来寻找最佳参数</span>
@@ -12631,9 +12635,9 @@ F1 score for test set: 0.7586.
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Made predictions in 0.0064 seconds.
+<pre>Made predictions in 0.0052 seconds.
 Tuned model has a training F1 score of 0.8692.
-Made predictions in 0.0024 seconds.
+Made predictions in 0.0018 seconds.
 Tuned model has a testing F1 score of 0.7586.
 </pre>
 </div>
