@@ -25663,9 +25663,9 @@ JEmSJEmSJEmSJEmSJEmSJNX1P5hsu8xshAILAAAAAElFTkSuQmCC
 <p><strong>回答:</strong> 前两个总共表示了0.4424+0.2766= 0.719的方差，前四个是0.719+0.1162+0.0962 = 0.9314的方差，基本涵盖了所有的特征信息。第一个纬度中绝对值最大的是的是Detergents_paper的使用量，表示纸张的使用量对一个特征的影响最大；第二个Fresh， Frozen以及Delicatessen的影响都很大；第三个是Fresh和Delicatessen影响大；第四个是Frozen影响大。
 感谢回答，了解了：）</p>
 <p>1）但是“从用户花费的角度来看前四个特征最能代表什么”这句话是什么意思呢？<br>
-   从用户花费的角度来看，第一个之中Detergent_Paper所占的比例最大，同时也看出来了Milk和Grocery同时占的比例比较大，因此代表了的产业是超市；第二个Fresh，Frozen和Delicatessen占的比例最大，代表了餐饮；第三个相关性最大的是Delicatessen，而负相关最大的是Fresh，代表了熟食店之类的吧；第四个Frozen正相关最大，代表了冷饮吧
+   从用户花费的角度来看，第一个之中Detergent_Paper所占的比例最大，同时也看出来了Milk和Grocery同时占的比例比较大，这三个具有相同的增长趋势。因此代表了的产业是超市；第二个Fresh，Frozen和Delicatessen占的比例最大，代表了餐饮；第三个相关性最大的是Delicatessen，而负相关最大的是Fresh，说明了买Delicatessen的人最不可能买Fresh，代表了熟食店之类的吧；第四个Frozen正相关最大，Delicatessen负相关最大，可能代表了冷饮店
 2）我之前通过监督学习说可以去掉特征Detergents_paper，但这里Degergents_paper在第一个个纬度中，而且占的绝对值非常重，那岂不和第监督学习矛盾了呢？
-   了解了，比重大和相关性没什么关系：）</p>
+   了解了，比重大和相关性没什么关系：）只是代表了一种趋势</p>
 
 </div>
 </div>
@@ -28386,7 +28386,7 @@ Segment 1    8951.0    2124.0    2790.0    2039.0    364.0                  728.
 第0个点 milk（s0) Grocery(s0)   --&gt;  Segment 0
 第1个点 milk(s1)  Frozen(s0）  Delicatessen(s1) --&gt; Segment 0
 第2个点 Fresh(s1) Milk(s1) --&gt;  Segment 0</p>
-<p>运行聚类算法后得出有2个聚类，之前是三个取样点认为有3个聚类。但PCA后得出最大的特征是2个，倒是与PCA比较一致</p>
+<p>运行聚类算法后得出有2个聚类。PCA后得出最大的特征是2个，与PCA比较一致</p>
 
 </div>
 </div>
